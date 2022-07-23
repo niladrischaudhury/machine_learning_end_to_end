@@ -3,9 +3,9 @@ from typing import List
 
 #Declaring variables for setup functions
 PROJECT_NAME="housing-predictor"
-VERSION="0.0.1"
-AUTHOR="Niladri Som Chaudhury"
-DESRCIPTION="Machine Learning End to End Project"
+VERSION="0.0.3"
+AUTHOR="Avnish Yadav"
+DESRCIPTION="This is a first FSDS Nov batch Machine Learning Project"
 
 REQUIREMENT_FILE_NAME="requirements.txt"
 
@@ -29,10 +29,11 @@ def get_requirements_list() -> List[str]:
 
 
 setup(
-    name=PROJECT_NAME,
-    version=VERSION,
-    author=AUTHOR,
-    description=DESRCIPTION,
-    packages=find_packages(), 
-    install_requires=get_requirements_list()
-    )
+name=PROJECT_NAME,
+version=VERSION,
+author=AUTHOR,
+description=DESRCIPTION,
+packages=find_packages(), 
+install_requires=get_requirements_list()
+)
+

@@ -1,5 +1,5 @@
-# machine_learning_end_to_end
-machine_learning_end_to_end
+Application url:
+[HousingPredictor](https://ml-regression-app.herokuapp.com/)
 
 ## Start Machine Learning project.
 
@@ -64,10 +64,10 @@ To check remote url
 git remote -v
 ```
 
-To setup CI/CD pipeline in heroku we need 3 information [Add as a Secret in Git]
-1. HEROKU_EMAIL = niladri.schaudhury@gmail.com
+To setup CI/CD pipeline in heroku we need 3 information
+1. HEROKU_EMAIL = anishyadav7045075175@gmail.com
 2. HEROKU_API_KEY = <>
-3. HEROKU_APP_NAME = machine-learning-end-to-end
+3. HEROKU_APP_NAME = ml-regression-app
 
 BUILD DOCKER IMAGE
 ```
@@ -91,8 +91,28 @@ To check running container in docker
 docker ps
 ```
 
-To stop docker conatiner
+Tos stop docker conatiner
 ```
 docker stop <container_id>
 ```
 
+
+
+```
+python setup.py install
+```
+
+
+Install ipykernel
+
+```
+pip install ipykernel
+```
+
+
+Data Drift:
+When your datset stats gets change we call it as data drift
+
+
+
+## Write a function to get training file path from artifact dir

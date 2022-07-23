@@ -3,24 +3,19 @@ from datetime import datetime
 import os
 import pandas as pd
 from housing.constant import get_current_time_stamp 
+LOG_DIR="logs"
 
-# Logging directory name
-LOG_DIR = "logs"
-
-# Function to return the log file name log_<current timestamp>.log
 def get_log_file_name():
     return f"log_{get_current_time_stamp()}.log"
 
-# Get the log file name
 LOG_FILE_NAME=get_log_file_name()
 
-# Create a directory
-os.makedirs(LOG_DIR, exist_ok=True)
+os.makedirs(LOG_DIR,exist_ok=True)
 
-# Get the log file path
 LOG_FILE_PATH = os.path.join(LOG_DIR,LOG_FILE_NAME)
 
-# Config the logging 
+
+
 logging.basicConfig(filename=LOG_FILE_PATH,
 filemode="w",
 format='[%(asctime)s]^;%(levelname)s^;%(lineno)d^;%(filename)s^;%(funcName)s()^;%(message)s',
@@ -40,3 +35,5 @@ def get_log_dataframe(file_path):
     log_df["log_message"] = log_df['Time stamp'].astype(str) +":$"+ log_df["message"]
 
     return log_df[["log_message"]]
+
+
